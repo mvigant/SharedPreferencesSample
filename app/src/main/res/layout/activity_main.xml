@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Текущий рейтинг"
+        android:id="@+id/textViewCurrentRating"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/buttonAddRate"
+        android:layout_alignEnd="@+id/buttonAddRate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/textViewCurrentRating"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewCurrentRating"
+        android:layout_alignEnd="@+id/textViewCurrentRating" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Максимальный рейтинг"
+        android:id="@+id/textViewMaximumRating"
+        android:layout_alignTop="@+id/textViewCurrentRating"
+        android:layout_alignLeft="@+id/buttonClearAllRate"
+        android:layout_alignStart="@+id/buttonClearAllRate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignLeft="@+id/textViewMaximumRating"
+        android:layout_alignStart="@+id/textViewMaximumRating"
+        android:layout_alignRight="@+id/textViewMaximumRating"
+        android:layout_alignEnd="@+id/textViewMaximumRating" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Rate"
+        android:id="@+id/buttonAddRate"
+        android:layout_alignTop="@+id/buttonClearAllRate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear Current Rate"
+        android:id="@+id/buttonClearCurrentRate"
+        android:layout_below="@+id/buttonAddRate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear All Rate"
+        android:id="@+id/buttonClearAllRate"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="66dp" />
+</RelativeLayout>
