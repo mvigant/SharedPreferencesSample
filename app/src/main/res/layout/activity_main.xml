@@ -20,7 +20,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/currentRateView"
         android:layout_below="@+id/textViewCurrentRating"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -39,8 +39,8 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:layout_alignBottom="@+id/editText"
+        android:id="@+id/maxRateView"
+        android:layout_alignBottom="@+id/currentRateView"
         android:layout_alignLeft="@+id/textViewMaximumRating"
         android:layout_alignStart="@+id/textViewMaximumRating"
         android:layout_alignRight="@+id/textViewMaximumRating"
@@ -53,7 +53,8 @@
         android:id="@+id/buttonAddRate"
         android:layout_alignTop="@+id/buttonClearAllRate"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="addCurrentRate" />
 
     <Button
         android:layout_width="wrap_content"
@@ -63,16 +64,20 @@
         android:layout_below="@+id/buttonAddRate"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/editText"
-        android:layout_alignEnd="@+id/editText" />
+        android:layout_alignRight="@+id/currentRateView"
+        android:layout_alignEnd="@+id/currentRateView"
+        android:onClick="clearCurrentRate" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Clear All Rate"
         android:id="@+id/buttonClearAllRate"
-        android:layout_below="@+id/editText2"
+        android:layout_marginRight="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_below="@+id/maxRateView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="66dp" />
+        android:layout_marginTop="85dp"
+        android:onClick="clearAllRate" />
 </RelativeLayout>
